@@ -2,6 +2,12 @@
 
 import { Results } from "@/components/results/Results";
 
+import { Suspense } from "react";
+
 export default function ResultsPage() {
-  return <Results />;
+  return (
+    <Suspense fallback={<div>Loading results...</div>}>
+      <Results />
+    </Suspense>
+  );
 }
